@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+.photo
+{
+    border-radius: 5px;
+    background-color: #132d36;    
+}
+.phrase__quote
+{
+    font-size: 28px;
+    line-height: 42px;
+    color: #848484;
+    font-weight: 100; 
+    font-style: italic;
+    font-family: "Georgia";    
+}
+.phrase__quotes-author
+{
+    font-size: 16px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 600;
+    font-family: "Open Sans";  
+}
+.list
+{
+    font-size: 19px;
+    line-height: 36px;
+    color: #555555;
+    font-family: "Georgia";  
+}
+.list-name
+{
+    font-size: 24px;
+    line-height: 32px;
+    color: #15a98c;
+    font-weight: 600;
+    font-family: "Open Sans";
+}
+.owner-name
+{
+    font-size: 48px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Open Sans";    
+}
+.rectangle
+{
+    border-radius: 3px;
+    background-color: #45c3aa;    
+}
+.about-me
+{
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";    
+}
+.article-name
+{
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";    
+}
+.article
+{
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";    
+}
+.feedback
+{
+    font-size: 19px;
+    line-height: 32px;
+    color: #15a98b;
+    font-family: "Georgia";    
+}
+.feedback:hover
+{
+    color: #098d72;
+    font-family: "Georgia"; 
+}

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+.show
+{
+    margin: 100px 0 0 260px;
+    height: 1040px;
+    width: 1000px;
+}
+.show__top-line
+{
+    height: 350px;
+    width: 960px;
+}
+.show__photo
+{
+    margin: 0 60px 0 20px;
+    float: left;
+    display: inline;
+    border-radius: 5px;
+    background-color: #132d36;    
+}
+.show__phrase
+{
+    margin: -300px -19px 0 0;
+    float: right;
+    display: inline;
+    height: 300px;
+    width: 570px;
+}
+.show__phrase__quote
+{
+    margin: -22px 0 0 61px;
+    font-size: 28px;
+    line-height: 42px;
+    color: #848484;
+    font-style: italic;
+    font-weight: 100;  
+    font-family: "Georgia";  
+}
+.show__phrase__quotes-author
+{
+    margin: 2px 0 0 64px;
+    font-size: 16px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 600;
+    font-family: "Open Sans";  
+}
+.show__bottom-line
+{
+    height: 640px;
+    width: 1000px;
+}
+.show__sidebar
+{
+    margin: 0 0 0 20px;
+    height: 657px;
+    width: 330px;  
+    float: left;  
+    display: inline;
+}
+.show__sidebar__lists_list-name
+{
+    margin: 45px 0 0 0;
+    font-size: 24px;
+    line-height: 32px;
+    color: #15a98c;
+    font-weight: 600;
+    font-family: "Open Sans";
+}
+.show__sidebar__lists__authors
+{
+    margin: 13px 0 -4px 0;
+    padding: 0 0 0 21px;
+    font-size: 19px;
+    line-height: 36px;
+    color: #555555;
+    font-family: "Georgia";  
+}
+.show__sidebar__lists__films
+{
+    margin: 12px 0 0 -19.5px;
+    font-size: 19px;
+    line-height: 36px;
+    color: #555555;
+    font-family: "Georgia";  
+}
+.show__text
+{
+    float: right;
+    display: inline;
+    height: 657px;
+    width: 570px;
+}
+.show__text__head__owner-name
+{
+    margin: 45px 0 0 -16px;    
+    font-size: 48px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Open Sans";    
+}
+.show__text__head__rectangle
+{
+    margin: 31px 0 0 -20px;
+    width: 60px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #45c3aa;  
+}
+.show__text__head__about-me
+{
+    margin: 40px 0 0 -20px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";    
+}
+.show__text__articles__article-name
+{
+    margin: 42px 0 0 -22px;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";    
+}
+.show__text__articles__article
+{
+    margin: 15px 0 0 -20px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";    
+}
+.show__text__feedback
+{
+    margin: 41px 0 0 -20px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #15a98b;
+    font-weight: 500;
+    font-family: "Georgia";    
+}
+.feedback:hover
+{
+    color: #098d72;
+    font-family: "Georgia";  
+}
