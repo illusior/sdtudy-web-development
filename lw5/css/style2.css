@@ -1,149 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-.show
+.main
 {
-    margin: 100px 0 0 260px;
+    margin: 100px auto;
     height: 1040px;
     width: 1000px;
 }
-.show__top-line
+.main-topline
 {
+    margin: auto 10px;
     height: 350px;
     width: 960px;
 }
-.show__photo
+.main-topline__photo
 {
-    margin: 0 60px 0 20px;
     float: left;
-    display: inline;
-    border-radius: 5px;
-    background-color: #132d36;    
+    border-radius: 5px; 
 }
-.show__phrase
+.main-topline-quotes
 {
-    margin: -300px -19px 0 0;
-    float: right;
-    display: inline;
-    height: 300px;
+    margin: auto 390px;
+    height: 200px;
     width: 570px;
 }
-.show__phrase__quote
+.main-topline-quotes__img
 {
-    margin: -22px 0 0 61px;
+    margin: 50px auto;
+}
+.main-topline-quotes__quote
+{
+    margin: -72px 0 0 60px;
     font-size: 28px;
     line-height: 42px;
     color: #848484;
+    font-weight: 300;
     font-style: italic;
-    font-weight: 100;  
-    font-family: "Georgia";  
+    font-family: "Georgia";    
 }
-.show__phrase__quotes-author
+.main-topline-quotes__author
 {
-    margin: 2px 0 0 64px;
+    margin: 2px 0 0 63px;
     font-size: 16px;
     line-height: 42px;
     color: #333333;
     font-weight: 600;
-    font-family: "Open Sans";  
+    font-family: "Open Sans";    
 }
-.show__bottom-line
+.main-bottomline
 {
     height: 640px;
-    width: 1000px;
+    width: auto;
 }
-.show__sidebar
+.main-bottomline-lists
 {
-    margin: 0 0 0 20px;
-    height: 657px;
-    width: 330px;  
-    float: left;  
-    display: inline;
+    float: left;
+    margin: auto 10px;
+    height: auto;
+    width: 330px;
 }
-.show__sidebar__lists_list-name
+.main-bottomline-lists__title
 {
-    margin: 45px 0 0 0;
+    margin: 0 0 13px 0;
     font-size: 24px;
     line-height: 32px;
     color: #15a98c;
     font-weight: 600;
-    font-family: "Open Sans";
+    font-family: "Open Sans";    
 }
-.show__sidebar__lists__authors
+.main-bottomline-lists__authors
 {
-    margin: 13px 0 -4px 0;
-    padding: 0 0 0 21px;
+    margin: 0 0 41px 21px;
+    padding: 0 0 0 0;
     font-size: 19px;
     line-height: 36px;
     color: #555555;
-    font-family: "Georgia";  
+    font-family: "Georgia";    
 }
-.show__sidebar__lists__films
+.main-bottomline-lists__films
 {
-    margin: 12px 0 0 -19.5px;
+    margin: -1px 0 41px 20.7px;
+    padding: 0 0 0 0;
     font-size: 19px;
     line-height: 36px;
     color: #555555;
-    font-family: "Georgia";  
+    font-family: "Georgia";    
 }
-.show__text
+.main-bottomline-text
 {
-    float: right;
-    display: inline;
-    height: 657px;
+    margin: 45px 0 0 404px;
+    height: auto;
     width: 570px;
 }
-.show__text__head__owner-name
+.main-bottomline-text__owner
 {
-    margin: 45px 0 0 -16px;    
     font-size: 48px;
     line-height: 42px;
     color: #333333;
     font-weight: 700;
     font-family: "Open Sans";    
 }
-.show__text__head__rectangle
+.main-bottomline-text__rectangle
 {
-    margin: 31px 0 0 -20px;
+    margin: -1px 0 0 -4px;
     width: 60px;
     height: 6px;
     border-radius: 3px;
-    background-color: #45c3aa;  
+    background-color: #45c3aa;    
 }
-.show__text__head__about-me
+.main-bottomline-text__aboutme
 {
-    margin: 40px 0 0 -20px;
+    margin: 44px 0 0 -4px;;
     font-size: 19px;
     line-height: 32px;
     color: #555555;
     font-family: "Georgia";    
 }
-.show__text__articles__article-name
+.main-bottomline-text__articlename
 {
-    margin: 42px 0 0 -22px;
+    margin: 42px 0px 0 -6px;
     font-size: 36px;
     line-height: 42px;
     color: #333333;
     font-weight: 400;
     font-family: "Open Sans";    
 }
-.show__text__articles__article
+.main-bottomline-text__article
 {
-    margin: 15px 0 0 -20px;
+    margin: 15px 0 0 -4px;;
     font-size: 19px;
     line-height: 32px;
     color: #555555;
     font-family: "Georgia";    
 }
-.show__text__feedback
+.ref-container
 {
-    margin: 41px 0 0 -20px;
+    width: 140px;
+    margin: 41px 0 0 -4px;
     font-size: 19px;
-    line-height: 32px;
     color: #15a98b;
-    font-weight: 500;
-    font-family: "Georgia";    
+    font-family: "Georgia";     
 }
-.feedback:hover
+.ref
 {
-    color: #098d72;
-    font-family: "Georgia";  
+    line-height: 32px;
+    text-decoration: none;
+    color: #15a98b;
+    font-family: "Georgia"; 
+    font-weight: 400;
+    border-bottom: #15a98b solid 2px;   
+}
+.ref:hover,
+.ref-container:hover
+{
+    color: #098d72;  
+}
+.clear
+{
+    clear: both;
 }

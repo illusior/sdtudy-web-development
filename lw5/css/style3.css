@@ -1,0 +1,534 @@
+.page-top
+{
+    margin: -8px 0 0 -8px;
+    height: 450px;
+    width: 1920px;
+}
+.topmenu
+{
+    display: flex;
+    margin: auto 480px;
+    height: 50px;
+    width: 600px;
+}
+.about-me-ref
+{
+    width: 140px;
+    text-decoration: none;
+    background-color: #15a98c;
+    font-size: 19px;
+    font-weight: 400;
+    color: #f5f5f5;
+    font-family: "Georgia";    
+}
+.about-me-ref__img
+{
+    margin: 17px 5px -1px 21px;
+}
+.about-me-ref:hover
+{
+    background-color: #098d72;      
+}
+.hobby-ref
+{
+    width: 180px;
+}
+.film-ref
+{
+    width: 195px;  
+}
+.hobby-ref__img
+{
+    margin: 18px 5px -2px 20px;
+}
+.hobby-ref,
+.film-ref
+{
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 400;
+    color: #333333;
+    font-family: "Georgia";      
+}
+.film-ref__img
+{
+    margin: 17px 6px -1px 0;
+}
+.background
+{
+    position: absolute;
+    z-index: -1;
+    height: 400px;
+    width: 1920px;
+    background-color: black;    
+}
+.background__img
+{
+    opacity: .5;
+}
+.aboutme
+{
+    margin: -450px 0 0 462px;
+    height: 915px;
+    width: 950px;
+}
+.aboutme-topline
+{
+    margin: auto 10px;
+    height: 350px;
+    width: 960px;
+}
+.aboutme-topline__photo
+{
+    float: left;
+    margin: -25px 0 0 0;
+    border-radius: 5px; 
+}
+.aboutme-topline-quotes
+{
+    margin: auto 390px;
+    height: 200px;
+    width: 570px;
+}
+.aboutme-topline-quotes__quote
+{
+    margin: 285px 0 0 3px;
+    font-size: 28px;
+    line-height: 42px;
+    color: #f5f5f5;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Georgia";    
+}
+.aboutme-topline-quotes__author
+{
+    margin: 2px 0 0 6px;
+    font-size: 16px;
+    line-height: 42px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Open Sans";    
+}
+.aboutme-topline__owner
+{
+    margin: 10px 0 0 394px;
+    font-size: 48px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Open Sans";    
+}
+.aboutme-topline__rectangle
+{
+    margin: 31px 0 0 390px;
+    width: 60px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #45c3aa;    
+}
+.aboutme-bottomline
+{
+    margin: 45px 0 0 0;
+    height: 580px;
+    width: auto;
+}
+.aboutme-bottomline-lists
+{
+    float: left;
+    margin: 37px 0 0 10px;
+    height: auto;
+    width: 330px;
+}
+.aboutme-bottomline-lists__title
+{
+    margin: 0 0 13px 0;
+    font-size: 24px;
+    line-height: 32px;
+    color: #15a98c;
+    font-weight: 600;
+    font-family: "Open Sans";    
+}
+.aboutme-bottomline-lists__authors
+{
+    margin: 0 0 41px 21px;
+    padding: 0 0 0 0;
+    font-size: 19px;
+    line-height: 36px;
+    color: #555555;
+    font-family: "Georgia";    
+}
+.aboutme-bottomline-lists__films
+{
+    margin: -1px 0 41px 20.7px;
+    padding: 0 0 0 0;
+    font-size: 19px;
+    line-height: 36px;
+    color: #555555;
+    font-family: "Georgia";    
+}
+.aboutme-bottomline-text
+{
+    margin: -62px 0 0 404px;
+    height: auto;
+    width: 570px;
+}
+.aboutme-bottomline-text__aboutme
+{
+    margin: 44px 0 0 -4px;;
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";    
+}
+.aboutme-bottomline-text__articlename
+{
+    margin: 42px 0 16px -6px;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";    
+}
+.aboutme-bottomline-text__article
+{
+    margin: -1px 0 0 -4px;;
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";    
+}
+.ref-container
+{
+    width: 140px;
+    margin: 41px 0 0 -4px;
+    font-size: 19px;
+    color: #15a98b;
+    font-family: "Georgia";     
+}
+.ref
+{
+    line-height: 32px;
+    text-decoration: none;
+    color: #15a98b;
+    font-family: "Georgia"; 
+    font-weight: 400;
+    border-bottom: #15a98b solid 2px;   
+}
+.ref:hover,
+.ref-container:hover
+{
+    color: #098d72;  
+}
+.clear
+{
+    clear: both;
+}
+.films-container
+{
+    margin: -1px 0 0 -8px;
+    background-color: #f9f9f9;
+    height: 1040px;
+    width: 1920px;    
+}
+.movies-wrapper
+{
+    padding: 6px 0 0 360px;
+    height: 975px;
+    width: 1200px;
+}
+.movies-container__header
+{
+    margin: 30px 0 33px 0;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";     
+}
+.movies
+{
+    display: flex;
+    justify-content: space-between;
+}
+.movies__img
+{
+    border-radius: 5px;
+    height: 190px;
+    width: 285px;
+}
+.movies__name
+{
+    margin: 23px 0 1px -2px;
+    width: 285px;
+    font-size: 22px;
+    line-height: 32px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+.movies__description
+{
+    width: 285px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #555555;
+    font-family: "Georgia";    
+}
+.movies-button
+{
+    margin: 38px 0 0 480px;
+    display: flex;
+    justify-content: center;
+    align-content: center;   
+    height: 50px;
+    width: 220px;
+    background-color: #15a98c;
+    border-radius: 5px;
+}
+.movies-button:hover
+{
+    background-color: #098d71;
+}
+.movies-button__ref
+{
+    padding: 14px 0 0 55px;
+    width: 220px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: 400;
+    color: #f5f5f5;
+    font-family: "Georgia";
+}
+.form
+{
+    margin: auto -8px;
+    height: 873px;
+    width: 1920px
+}
+.form-container
+{
+    margin: auto 604px;
+    height: 940px;
+    width: 698px;
+}
+.form-container-header
+{
+    margin: 67px 0 0 0;
+    height: auto;
+    width: auto;
+}
+.form-container-header__text
+{
+    margin: -31px 0 0 200px;
+    width: 298px;
+    background-color: white;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 300;
+    font-family: "Open Sans";
+}
+.feedback-area
+{
+    display: flex;
+    flex-direction: column;
+    margin: 51px 0 0 85px;
+}
+.name-area
+{
+    margin-bottom: 7px;
+}
+.email-area
+{
+    margin-bottom: 8px;
+}
+.country-area
+{
+    margin-bottom: 24px;
+}
+.name-area-text,
+.email-area-text,
+.messagebox-area-text
+{
+    display: flex;
+    justify-content: space-between;
+}
+.name-area-text
+{
+    width: 113px;
+    height: 52px;
+}
+.email-area-text
+{
+    width: 114px;
+    height: 52px;
+}
+.messagebox-area-text
+{
+    width: 186px;
+    height: 52px;
+}
+.field-name,
+.field-name-star
+{
+    font-size: 20px;
+    line-height: 32px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+.field-name-star
+{
+    color: #ee0707;
+}
+.input-field
+{
+    margin-left: 1px;
+    width: 532px;
+    height: 44px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 2px solid #c9c9c9; 
+    outline: none;
+}
+.input-field:hover
+{
+    border-radius: 3px;
+    background-color: #c9c9c9;
+    border: 2px solid #a6a6a6;    
+}
+.input-field:focus,
+.select-field:focus,
+.messagebox-area__input:focus
+{
+    border: 2px solid #15a98c;
+}
+.select-field
+{
+    outline: none;
+    cursor: pointer;
+    margin: -12px 0 0 1px;
+    padding: 0 0 3px 16px;
+    width: 540px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 2px solid #a6a6a6; 
+    appearance: none;
+    font-size: 18px;
+    line-height: 32px;
+    color: #555555;
+    font-weight: 400;
+    font-family: "Open Sans"; 
+    background: url('../images/arrow_down.png') no-repeat right center;
+    background-position-x: 498px;      
+    background-position-y: 18px;
+}
+.select-option
+{
+    outline: none;
+    font-size: 18px;
+    line-height: 32px;
+    color: #555555;
+    font-weight: 400;
+    font-family: "Open Sans";    
+}
+.type-radio
+{
+    margin-bottom: -12px;
+    display: flex;
+    justify-content: space-between;
+    width: 243px;
+    height: 51px;
+}
+.type-radio-gender
+{
+    margin: -11px 4px 0 1px;
+}
+.type-radio__label
+{
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 32px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans"; 
+    position: relative;   
+}
+input[type="radio"]
+{
+    display: none;
+}
+.type-radio__label::before
+{
+    content: "";
+    background-color: #dedede ;
+    border: 1px solid #a8a8a8;
+    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 9px 1px 0;
+}
+.type-radio__label::after
+{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(102, 102, 102, 0);
+    border-radius: 50%;
+    left: 3px;
+    top: 9px;
+    transition: all 0s;
+}
+input[type=radio]:checked + .type-radio__label::after
+{
+    background: rgba(102, 102, 102, 1);
+}
+.messagebox-area__input
+{
+    outline: none;
+    resize: none;
+    width: 532px;
+    margin-left: 1px;
+    height: 142px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 2px solid #c9c9c9;    
+}
+.submit-button
+{
+    margin: 46px 0 0 1px;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #15a98c;   
+    font-size: 19px;
+    line-height: 32px;
+    color: #f5f5f5;
+    font-family: "Georgia";
+    border: none;     
+}
+.submit-button:hover
+{
+    background-color: #098d71;    
+}
+.footer
+{
+    margin-left: -8px;
+    width: 1920px;
+    height: 70px;
+    background-color: #f9f9f9;    
+}
+.footer__text
+{
+    padding: 18px 0 0 592px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";
+}
