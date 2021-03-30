@@ -392,6 +392,9 @@
     background-color: #ffffff;
     border: 2px solid #c9c9c9; 
     outline: none;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
 }
 .input-field:hover
 {
@@ -499,9 +502,13 @@ input[type=radio]:checked + .type-radio__label::after
     border-radius: 3px;
     background-color: #ffffff;
     border: 2px solid #c9c9c9;    
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
 }
 .submit-button
 {
+    cursor: pointer;
     margin: 46px 0 0 1px;
     width: 220px;
     height: 50px;
