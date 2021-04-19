@@ -11,15 +11,25 @@ function isPrimeNumber(n) {
             }
         }
         if (isPrime) {
-               return console.log(`${n} is prime number`)
+            if (n >= 10) {
+                return `${n} is     prime number`
+            } else {
+                return ` ${n} is     prime number`
+            }
         } else {
-              return console.log(`${n} is not prime number`)
+            if (n >= 10){
+                return `${n} is not prime number`
+            } else {
+                return ` ${n} is not prime number`
+            }             
         }      
     } else if (Array.isArray(n)) {
-        n.forEach(element => {
-            isPrimeNumber(element)
-        });
+        let result = ''
+        for (let index in n) {
+            result += `${isPrimeNumber(n[index])}\n `
+        }
+        return result  
     } else {
-        return console.log(`${n} - не число`)
+        return ` ${n} - not a number`
     }    
 }
