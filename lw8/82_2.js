@@ -1,13 +1,14 @@
 function calc(expression) {
     /* функция вычисляет выражение, записанное в польской нотации, в !expression-строке! */
-    expression = formate(expression) // expression = "*+1 2.3 4,6" -> expression = ['+', '1', '2.3', '4,6']
+    expression = formate(expression) // expression = "*+1 (2.3 4.6)" -> expression = ["*", "+", "1", "2.3", "4,6"]
     const digits = []
+    const operators = ["*", "/", "+", "-", "^"]
     for(let i = expression.length; i !== -1; i--) {
         let firstOperand
         let secondOperand
         if(isInteger(Number(expression[i])) || isFloat(Number(expression[i]))) {
             digits.push(Number(expression[i]))
-        } else if(expression[i] === "*" || expression[i] === "/" || expression[i] === "+" || expression[i] === "-" || expression[i] === "^") {
+        } else if(operators.indexOf(expression[i]) !== -1) {
             if(digits.length < 2) return "err missing values"            
             firstOperand = digits.pop()
             secondOperand = digits.pop()
@@ -25,27 +26,40 @@ function calc(expression) {
             return digits[0]
         }    
     } else return "err missing operators"
-}    
-function isInteger(num) {
-    return (num ^ 0) === num;
-}
+} 
+
 function formate(expression) {
-    const operations = /[\-\+\/\*\^]/gm
-    const digits = /\d+\.\d+|\d+/gm
+    const operations = /\-|\+|\/|\*|\^/gm   // операторы
+    const digits = /\d+\.\d+|\d+/gm         // float или int
     const result = []
     let resultOfOperators = expression.match(operations)
     let resultOfDigits = expression.match(digits)
-    for(element in resultOfOperators) {
-        result.push(resultOfOperators[element])
-    }
+    if(isValid(expression)) {
+        for(element in resultOfOperators) {
+            result.push(resultOfOperators[element])
+        }
+    }    
     for(element in resultOfDigits) {
         result.push(resultOfDigits[element])
     }
-    return result
+    return result    
 }
+
 function isInteger(num) {
     return (num ^ 0) === num;  //при поразрядовых операциях отбрасывается дробная часть, 2.7 ^ 0 === 2
 }
+
 function isFloat(n){
     return Number(n) === n && n % 1 !== 0;  //по остатку от деления
+}
+
+function isValid(arrayOfElements) {
+    const brackets = /\(|\)/gm
+    let arrayOfBrackets = arrayOfElements.match(brackets)
+    if (arrayOfBrackets === null) arrayOfBrackets = []
+    if(arrayOfBrackets.length % 2 === 0) {
+        return true
+    } else {
+        return false
+    }
 }
