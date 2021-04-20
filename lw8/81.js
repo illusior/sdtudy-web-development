@@ -1,6 +1,6 @@
 function isPrimeNumber(n) {
     // функция принимает n - число / массив чисел и отвечает, является ли переданные числа простыми (неэффективно для больших значений)
-    if (Array.isArray(n)) {
+    if (n instanceof Array) {
         for (let i = 0; i !== n.length; i++) {
             if (!isInteger(n[i])) return "err array has a wrong element"
             if (n[i] >= 10000) return "oops, that array has a number, which is too heavy for checking"
