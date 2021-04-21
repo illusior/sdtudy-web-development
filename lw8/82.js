@@ -1,31 +1,74 @@
-function calc() {
-
-    this.solvePostFix = function(expression) {
-        let result = []
-        expression = expression.split(" ")
-        for(let i = 0; i < expression.length; i++) {
-            if(expression[i].isNumeric()) {
-                result.push(expression[i])
-            } else {
-                let a = expression.pop()
-                let b = expression.pop()
-                if(expression[i] === "+") {
-                    expression.push(parseInt(a) + parseInt(b))
-                } else if(expression[i] === "-") {
-                    expression.push(parseInt(b) - parseInt(a))
-                } else if(expression[i] === "*") {
-                    expression.push(parseInt(a) * parseInt(b))
-                } else if(expression[i] === "/") {
-                    expression.push(parseInt(b) / parseInt(a))
-                } else if(expression[i] === "^") {
-                    expression.push(Math.pow(parseInt(a), parseInt(b)))
-                }
+function calc(expression) {
+    /* функция вычисляет выражение, записанное в польской нотации, в !expression-строке! */
+    expression = formate(expression) // expression = "*+1 (2.3 4.6)" -> expression = ["*", "+", "1", "2.3", "4,6"]
+    const digits = []
+    const operators = ["*", "/", "+", "-", "^"]
+    for(let i = expression.length; i !== -1; i--) {
+        let firstOperand
+        let secondOperand
+        if(isInteger(Number(expression[i])) || isFloat(Number(expression[i]))) {
+            digits.push(Number(expression[i]))
+            expression.pop()
+        } else if(operators.indexOf(expression[i]) !== -1) {
+            if(digits.length < 2) {
+                let lastOperator = expression.pop()
+                return `err missing value for "${lastOperator}" operator`
             }
+            firstOperand = digits.pop()
+            secondOperand = digits.pop()
+            if(expression[i] === "*") digits.push(firstOperand * secondOperand)
+            if(expression[i] === "/") digits.push(firstOperand / secondOperand)
+            if(expression[i] === "+") digits.push(firstOperand + secondOperand)
+            if(expression[i] === "-") digits.push(firstOperand - secondOperand)
+            if(expression[i] === "^") digits.push(Math.pow(firstOperand, secondOperand))
+            expression.pop()      
+        }  
+    } 
+    if (digits.length === 1) {
+        if (!isInteger(digits[0])) {
+            return Number.parseFloat((digits[0]).toFixed(3))
+        } else {
+            return digits[0]
+        }    
+    } else {
+        let lostDigitFirst = digits.pop()
+        let lostDigitSecond = digits.pop()
+        return `err missing operators for "${lostDigitFirst}" and "${lostDigitSecond}" values`
+    }     
+} 
+
+function formate(expression) {
+    const operations = /\-|\+|\/|\*|\^/gm   // операторы
+    const digits = /\d+\.\d+|\d+/gm         // float или int
+    const result = []
+    let resultOfOperators = expression.match(operations)
+    let resultOfDigits = expression.match(digits)
+    if(isValid(expression)) {
+        for(element in resultOfOperators) {
+            result.push(resultOfOperators[element])
         }
-        return result.pop()
     }    
-    
+    for(element in resultOfDigits) {
+        result.push(resultOfDigits[element])
+    }
+    return result    
 }
-String.prototype.isNumeric = function() {
-    return !isNaN(parseFloat(this)) && isFinite(this)
+
+function isInteger(num) {
+    return (num ^ 0) === num;  //при поразрядовых операциях отбрасывается дробная часть, 2.7 ^ 0 === 2
+}
+
+function isFloat(n){
+    return Number(n) === n && n % 1 !== 0;  //по остатку от деления
+}
+
+function isValid(arrayOfElements) {
+    const brackets = /\(|\)/gm
+    let arrayOfBrackets = arrayOfElements.match(brackets)
+    if (arrayOfBrackets === null) arrayOfBrackets = []
+    if(arrayOfBrackets.length % 2 === 0) {
+        return true
+    } else {
+        return false
+    }
 }
