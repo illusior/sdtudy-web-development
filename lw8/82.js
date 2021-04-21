@@ -85,9 +85,9 @@ function areBracketsValid(expression) {
     if (expression[i] === "(" || expression[i] === ")") amount++;
   }  
   if (amount % 2 === 0) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 
 }
