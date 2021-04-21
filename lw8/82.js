@@ -1,57 +1,95 @@
 function calc(expression) {
-    /* функция вычисляет выражение, записанное в польской нотации, в !expression-строке! */
-    expression = formate(expression) // expression = "*+1 (2.3 4.6)" -> expression = ["*", "+", "1", "2.3", "4,6"]
-    const digits = []
-    const operators = ["*", "/", "+", "-", "^"]
-    for(let i = expression.length; i !== -1; i--) {
-        let firstOperand
-        let secondOperand
-        if(isInteger(Number(expression[i])) || isFloat(Number(expression[i]))) {
-            digits.push(Number(expression[i]))
-            expression.pop()
-        } else if(operators.indexOf(expression[i]) !== -1) {
-            if(digits.length < 2) {
-                let lastOperator = expression.pop()
-                return `err missing value for "${lastOperator}" operator`
-            }
-            firstOperand = digits.pop()
-            secondOperand = digits.pop()
-            if(expression[i] === "*") digits.push(firstOperand * secondOperand)
-            if(expression[i] === "/") digits.push(firstOperand / secondOperand)
-            if(expression[i] === "+") digits.push(firstOperand + secondOperand)
-            if(expression[i] === "-") digits.push(firstOperand - secondOperand)
-            if(expression[i] === "^") digits.push(Math.pow(firstOperand, secondOperand))
-            expression.pop()      
-        }  
-    } 
-    if (digits.length === 1) {
-        if (!isInteger(digits[0])) {
-            return Number.parseFloat((digits[0]).toFixed(3))
+  
+  /* функция вычисляет выражение, записанное в польской нотации, в !expression-строке! */
+
+  if (typeof expression !== "string" || !isValid(expression)) return "ERR! Unexpected symbols!";
+  if (expression === "") return "Opps... nothing happend";
+  if (!areBracketsValid(expression)) return "ERR not enough brackets";
+
+  elements = prepare(expression);
+  let digits = [];
+
+  for (let i = elements.length - 1; i !== -1; i--) {
+    
+    if (isInteger(Number(elements[i])) || isFloat(Number(elements[i]))) {
+
+      digits.push(Number(elements[i]));
+
+    } else if (isOperator(elements[i])) {
+
+      if(digits.length < 2) {
+        return `err missing value for "${elements[i]}" operator`;
+      }
+
+      firstOperand = digits.pop();
+      secondOperand = digits.pop();
+      if(elements[i] === "*") digits.push(firstOperand * secondOperand);
+      if(elements[i] === "+") digits.push(firstOperand + secondOperand);
+      if(elements[i] === "-") digits.push(firstOperand - secondOperand);
+      if(elements[i] === "^") digits.push(Math.pow(firstOperand, secondOperand));
+      if(elements[i] === "/") {
+        if (secondOperand !== 0) {
+          digits.push(firstOperand / secondOperand);
         } else {
-            return digits[0]
-        }    
+          return "ERR! Attemption to divide by 0!";
+        }  
+      }
+
+    }  
+  }
+  if (digits.length === 1) {
+    if (isFloat(digits[0])) {
+      return Number((digits[0]).toFixed(3));
     } else {
-        let lostDigitFirst = digits.pop()
-        let lostDigitSecond = digits.pop()
-        return `err missing operators for "${lostDigitFirst}" and "${lostDigitSecond}" values`
-    }     
+      return digits[0];
+    }    
+  } else {
+    let lostDigitFirst = digits.pop();
+    let lostDigitSecond = digits.pop();
+    return `err missing operator for "${lostDigitFirst}" and "${lostDigitSecond}" values`;
+  }
 } 
 
-function formate(expression) {
-    const operations = /\-|\+|\/|\*|\^/gm   // операторы
-    const digits = /\d+\.\d+|\d+/gm         // float или int
-    const result = []
-    let resultOfOperators = expression.match(operations)
-    let resultOfDigits = expression.match(digits)
-    if(isValid(expression)) {
-        for(element in resultOfOperators) {
-            result.push(resultOfOperators[element])
-        }
-    }    
-    for(element in resultOfDigits) {
-        result.push(resultOfDigits[element])
-    }
-    return result    
+function prepare(expression) {
+
+  const expectedValues = /\d+\.\d+|\d+|(\-\d+)|\+|\-|\*|\//g;
+  let elements = expression.match(expectedValues);
+
+  if (elements !== null) {
+    return elements;
+  } else {
+    elements = [];
+    return elements;
+  }
+
+}
+
+function isValid(expression) {
+
+  const unExpectedSymbols = /[^\d+|\+|\-|\*|\/|\^| |\(|\)|\.|\d+\.\d+]/g;
+  let errors = expression.match(unExpectedSymbols);
+
+  if (errors === null) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+function areBracketsValid(expression) {
+  
+  let amount = 0;
+
+  for (let i = 0; i !== expression.length; i++) {
+    if (expression[i] === "(" || expression[i] === ")") amount++;
+  }  
+  if (amount % 2 === 0) {
+    return true
+  } else {
+    return false
+  }
+
 }
 
 function isInteger(num) {
@@ -62,13 +100,15 @@ function isFloat(n){
     return Number(n) === n && n % 1 !== 0;  //по остатку от деления
 }
 
-function isValid(arrayOfElements) {
-    const brackets = /\(|\)/gm
-    let arrayOfBrackets = arrayOfElements.match(brackets)
-    if (arrayOfBrackets === null) arrayOfBrackets = []
-    if(arrayOfBrackets.length % 2 === 0) {
-        return true
-    } else {
-        return false
-    }
+function isOperator(element) {
+
+  let operators = ["+", "-", "*", "/", "^"];
+  let isOperator = operators.indexOf(element) !== -1;
+
+  if (isOperator) {
+    return true;
+  } else {
+    return false;
+  }
+
 }

@@ -3,8 +3,12 @@ function isPrimeNumber(n) {
 
   if (n instanceof Array) {
     for (let i = 0; i !== n.length; i++) {
-      if (!isInteger(n[i])) return "err array has a wrong element";
-      if (n[i] >= 10000) return "oops, that array has a number, which is too heavy for checking";
+      if (!isInteger(n[i])) {
+        return "err array has a wrong element";
+      }  
+      if (n[i] >= 10000) {
+        return "oops, that array has a number, which is too heavy for checking";
+      }  
     }
   }
 
