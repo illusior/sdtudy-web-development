@@ -21,14 +21,28 @@ function calc(expression) {
       if(digits.length < 2) {
         return `ERR! missing value for "${operator}" operator`;
       }
-
       calculating(digits, operator);
-
     }  
   }
-  return writeAnswer(digits);
-} 
 
+  if (digits.length === 1) {
+
+    if (isFloat(digits[0])) {
+      return Number((digits[0]).toFixed(3));
+    } else {
+      return digits[0];
+    } 
+
+  } else {
+
+    let lostDigitFirst = digits.pop();
+    let lostDigitSecond = digits.pop();
+
+    return `err missing operator for "${lostDigitFirst}" and "${lostDigitSecond}" values`;
+
+  }
+
+} 
 
 function isValid(expression) {
   // проверяет expression, вернёт true, если expresion валидный
@@ -54,7 +68,6 @@ function areBracketsValid(expression) {
   }  
   if (amount % 2 === 0) {
     return true;
-<<<<<<< HEAD
   } else {
     return false;
   }
@@ -72,10 +85,6 @@ function prepare(expression) {
   } else {
     elements = [];
     return elements;
-=======
-  } else {
-    return false;
->>>>>>> ab001303d90d915e47bcdead17cd4d6d987172be
   }
 
 }
@@ -101,7 +110,6 @@ function isOperator(element) {
   }
 
 }
-<<<<<<< HEAD
 
 function calculating(digits, operator) {
   // считает значения для digits, в зависимости от оператора
@@ -109,10 +117,10 @@ function calculating(digits, operator) {
   firstOperand = digits.pop();
   secondOperand = digits.pop()
 
-  if(operator === "*") digits.push(firstOperand * secondOperand);
+  if(operator === "^") digits.push(Math.pow(firstOperand, secondOperand));
   if(operator === "+") digits.push(firstOperand + secondOperand);
   if(operator === "-") digits.push(firstOperand - secondOperand);
-  if(operator === "^") digits.push(Math.pow(firstOperand, secondOperand));
+  if(operator === "*") digits.push(firstOperand * secondOperand);
   if(operator === "/") {
     if (secondOperand !== 0) {
       digits.push(firstOperand / secondOperand);
@@ -122,27 +130,3 @@ function calculating(digits, operator) {
   }
 
 }
-
-function writeAnswer(digits) {
-  // возвращает ответ вычислений
-
-  if (digits.length === 1) {
-
-    if (isFloat(digits[0])) {
-      return Number((digits[0]).toFixed(3));
-    } else {
-      return digits[0];
-    } 
-
-  } else {
-
-    let lostDigitFirst = digits.pop();
-    let lostDigitSecond = digits.pop();
-
-    return `err missing operator for "${lostDigitFirst}" and "${lostDigitSecond}" values`;
-
-  }
-
-}
-=======
->>>>>>> ab001303d90d915e47bcdead17cd4d6d987172be
