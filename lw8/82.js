@@ -54,6 +54,7 @@ function areBracketsValid(expression) {
   }  
   if (amount % 2 === 0) {
     return true;
+<<<<<<< HEAD
   } else {
     return false;
   }
@@ -71,6 +72,10 @@ function prepare(expression) {
   } else {
     elements = [];
     return elements;
+=======
+  } else {
+    return false;
+>>>>>>> ab001303d90d915e47bcdead17cd4d6d987172be
   }
 
 }
@@ -96,6 +101,7 @@ function isOperator(element) {
   }
 
 }
+<<<<<<< HEAD
 
 function calculating(digits, operator) {
   // считает значения для digits, в зависимости от оператора
@@ -138,3 +144,5 @@ function writeAnswer(digits) {
   }
 
 }
+=======
+>>>>>>> ab001303d90d915e47bcdead17cd4d6d987172be
