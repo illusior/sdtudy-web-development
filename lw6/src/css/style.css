@@ -420,7 +420,11 @@
 }
 .films-area-content
 {
+<<<<<<< HEAD
     min-width: 100%;
+=======
+    min-width: 100%;    
+>>>>>>> 766667a28764989f77a9af54f69c93e892bbece2
     display: flex;
     flex-flow: row wrap;
     margin-top: 33px;
@@ -489,6 +493,7 @@
     color: #f5f5f5;
     font-family: "Georgia";    
 }
+<<<<<<< HEAD
 
 .form
 {
@@ -766,3 +771,5 @@
     color: #555555;
     font-family: "Georgia";
 }
+=======
+>>>>>>> 766667a28764989f77a9af54f69c93e892bbece2
