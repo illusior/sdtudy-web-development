@@ -67,17 +67,17 @@
               <a name="aboutme"></a>
               <p class="text__about-me">
                   В 1930-е годы прошлого века физик Джордж Гамоу из
-                  университета штата Колорадо начал публиковать<br />
+                  университета штата Колорадо начал публиковать
                   мини-сериал рассказов о неком мистере Томпкинсе,
                   банковском клерке средних лет. Мистер Томпкинс, как
-                  явствовало из этих историй, интересовался современной<br />
+                  явствовало из этих историй, интересовался современной
                   наукой. 
               </p>
               <h2 class="text-header">Мое хобби</h2>
               <a name="hobby"></a>
               <p class="text__hobby">
                   Он регулярно посещал вечерние лекции местного профессора
-                  и, разумеется, всегда засыпал на самом интересном месте.<br /> 
+                  и, разумеется, всегда засыпал на самом интересном месте. 
                   А когда просыпался, то обнаруживал себя в каком-нибудь 
                   параллельном мире, где один из основных законов физики 
                   действовал не так, как в его мире. 
@@ -89,7 +89,7 @@
       </div>
       <div class="films-area">
         <div class="films-area-wrapper">
-          <p><a name="films"></a></p>
+          <a name="films"></a>
           <h2 class="films-area__name">Любимые фильмы</h2>
           <div class="films-area-content">
             <div class="film-container">
@@ -172,6 +172,43 @@
             <h2 class="film-ref-text">Все фильмы</h2>
           </a>
         </div>
-      </div>  
+      </div>
+      <div class="form">
+        <div class="form-flex-container">
+          <div class="form-header">
+            <hr class="form-header__line-first" />
+            <a name="feedback"></a>
+            <h2 class="form-header__text">НАПИШИ МНЕ</h2>
+            <hr class="form-header__line-second" />
+          </div>
+          <form class="form-work-area">
+            <label class="label-text" for="name">Ваше имя</label>
+            <input class="input-text" type="text" name="name" id="name" />
+            <label class="label-text" for="email">Ваш email</label>
+            <input class="input-text" type="text" name="email" id="email" />
+            <label class="label-text-country" for="country">Откуда вы?</label>
+            <select class="select-country">
+              <option class="option-value" value="ru">Россия</option>
+              <option class="option-value" value="cn">Китай</option>
+              <option class="option-value" value="us">США</option>
+            </select>
+            <label class="label-text-gender" for="gender">Ваш пол</label>
+            <div class="radio-gender">
+              <input class="input-radio" type="radio" name="gender" id="genderMale" value="male" />
+              <label class="label-radio" for="genderMale">Мужской</label>
+              <input class="input-radio" type="radio" name="gender" id="genderFemale" value="female" />
+              <label class="label-radio" for="genderFemale">Женский</label>
+            </div>  
+            <label class="label-text" for="message">Ваше сообщение</label>
+            <textarea class="textarea" name="text" id="message" cols="30" rows="10"></textarea>
+            <input class="submit-button" type="submit" />
+          </form>
+        </div>
+     </div>
+     <div class="footer">
+       <footer class="footer__text">
+         © 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»
+       </footer>
+     </div>  
   </body>
 </html>  
