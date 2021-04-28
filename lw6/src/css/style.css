@@ -115,7 +115,7 @@
 
 .about-me
 {
-    padding: 0 20px 0 20px; 
+    padding: 0 20px 0 15px; 
 }
 .about-me-wrapper
 { 
@@ -412,37 +412,39 @@
     font-family: "Open Sans";
 }
 @media screen and (max-width: 1024px)
-{
-    .films-area__name
+{ 
+    .films-area-wrapper
     {
-        align-self: center;
-    }    
+        padding: 0;
+    }
+    .film-container
+    {
+        margin-top: 10px;    
+    }
 }
 .films-area-content
 {
-<<<<<<< HEAD
     min-width: 100%;
-=======
-    min-width: 100%;    
->>>>>>> 766667a28764989f77a9af54f69c93e892bbece2
     display: flex;
     flex-flow: row wrap;
     margin-top: 33px;
     margin-left: -28px;
+    padding-left: 27px;
+    padding: 0 0 0 27px;
     justify-content: space-evenly;
 }
-@media screen and (max-width: 1024px) 
+@media screen and (max-width: 768px) 
 {
-    .film-container
+    .films-area__name
     {
-        margin-top: 10px;    
+        align-self: center;
     }
 }
 @media screen and (max-width: 320px)
 {
     .films-area-content
     {
-        margin-left: -12px;
+        margin-left: -27px;
     }
 }
 .film-img
@@ -451,6 +453,18 @@
     height: 190px;
     border-radius: 5px;
     background-color: #464646;    
+}
+@media screen and (max-width: 280px)
+{
+    .film-img
+    {
+        width: 230px;
+        height: 160px;
+    }    
+    .films-area-content
+    {
+        margin-left: -24px;
+    }    
 }
 .film-name
 {
@@ -493,7 +507,6 @@
     color: #f5f5f5;
     font-family: "Georgia";    
 }
-<<<<<<< HEAD
 
 .form
 {
@@ -599,9 +612,9 @@
 {
     align-self: start;
     outline: none; 
-    margin: 3px 0px 24.3px 0px;
+    margin: 3px 0px 24.3px 1px;
     padding-left: 18px;
-    min-width: 95.5%;
+    min-width: 95.4%;
     height: 44px;
     border-radius: 3px;
     background-color: #fff;
@@ -610,7 +623,13 @@
     font-weight: 400;
     font-family: "Open Sans";        
 }
-
+@media screen and (max-width: 570px)
+{
+    .input-text
+    {
+        min-width: 95.8%; 
+    }    
+}
 .select-country
 {
     margin: 4px 0 41px 0;
@@ -651,7 +670,7 @@
     .select-country
     {
         min-width: 101%;
-        margin-left: 7px;
+        margin-left: 6px;
         background: url('../imgs/arrow_down.png') no-repeat right center;   
         background-position-x: 398px;
         background-position-y: 18px;
@@ -688,7 +707,7 @@
     }
     .select-country
     {
-        min-width: 104.7%;
+        min-width: 105.8%;
         margin-left: 15px;
         background: url(../imgs/arrow_down.png) no-repeat right center;
         background-position-x: 208px;
@@ -707,21 +726,25 @@
 }
 .input-radio
 {
-    margin-right: 9.4px;    
+    margin-right: 8.4px;   
 }
 .label-radio
 {
-    margin-right: 37px;
+    margin-right: 40px;
     font-size: 18px;
     line-height: 32px;
     color: #333333;
     font-weight: 400;
     font-family: "Open Sans";    
 }
+.text-area-container
+{
+    max-width: 100%;
+}
 .textarea
 {
-    margin: 3px 0 50px 0px;
-    min-width: 98.2%;
+    margin: 3px 0 46px 0px;
+    min-width: 532px;
     height: 142px;
     outline: none;
     resize: none;
@@ -732,6 +755,27 @@
     font-weight: 400;
     font-family: "Open Sans";    
 }
+@media screen and (max-width: 570px)
+{
+    .textarea
+    {
+        min-width: 437.19px;
+    }
+}
+@media screen and (max-width: 480px)
+{
+    .textarea
+    {
+        min-width: 321.19px;
+    }
+}
+@media screen and (max-width: 320px)
+{
+    .textarea
+    {
+        min-width: 246.19px;
+    }
+}
 .textarea:focus,
 .input-text:focus,
 .select-country:focus
@@ -740,6 +784,7 @@
 }
 .submit-button
 {
+    margin-left: 1px;
     margin-bottom: 50px;
     align-self: flex-start;
     cursor: pointer;
@@ -771,5 +816,3 @@
     color: #555555;
     font-family: "Georgia";
 }
-=======
->>>>>>> 766667a28764989f77a9af54f69c93e892bbece2
