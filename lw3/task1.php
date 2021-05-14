@@ -7,34 +7,22 @@
 
     if ($text !== null)
     {
-        $index = 0;
-        $len = strlen($text);
-		$stat = false;
-
-        while ($index < $len)
-        {
-            $currChar = $text[$index];
-
-            if  ($currChar !== ' ')
-	        {
-	            echo $currChar;
-		        $index++;
-	        }
-	        else
-	        {
-			    if ($stat !== false)
-				{
-					echo $currChar;
-				}	
-	            while ($currChar === ' ')
-	            {
-	                $index++;
-	                $currChar = $text[$index];
-					if ($stat == false)
-					{
-					    $stat = true;	
-					}
-	            }
-	        }   
-        }
+        $arr = explode(' ', $text);
+		$arrLength = count($arr);
+		echo 'for input: ', $text, "<- input's end \n", 'output:';
+		for ($i = 0; $i <= $arrLength; $i++)
+		{
+			if ($arr[$i] === '')
+			{
+				continue;
+			}
+			else
+			{
+				echo $arr[$i], ' ';
+			}	
+		}
     }
+	else
+	{
+		echo 'param text is empty or not found';
+	}
