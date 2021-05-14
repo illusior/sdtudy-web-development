@@ -14,14 +14,6 @@
     min-height: 50px;
     margin: auto 25%;
 }
-@media screen and (max-width: 1024px)
-{
-    .navigation-menu
-    {
-        margin: 0 auto;
-        justify-content: center;
-    }    
-}
 .nav-ref-about,
 .nav-ref-hobby,
 .nav-ref-films
@@ -84,26 +76,6 @@
 {
     color: #333333;;  
 }
-@media screen and (max-width: 768px)
-{
-    .navigation-menu
-    {
-        flex-flow: column wrap;
-        min-width: 100%;
-        margin: 0;
-    }
-    .nav-ref-about,
-    .nav-ref-hobby,
-    .nav-ref-films
-    {
-        min-height: 50px;
-        justify-content: center;
-    }
-    .about-me
-    {
-        margin-top: -180px;
-    }
-}
 .top-background
 {
     margin-bottom: -190px;
@@ -137,13 +109,6 @@
 {
     grid-area: owners-img;
 }
-@media screen and (max-width: 320px)
-{
-    .owners-img
-    {
-        max-width: 95%;
-    }    
-}
 .quote
 {
     grid-area: quote;
@@ -170,84 +135,10 @@
         'list-of-films'
     ;
 }
-@media screen and (max-width: 920px) {
-    .sidebar
-    {
-        grid-template-areas: 'list-of-authors list-of-films';
-        grid-column-gap: 3.9em;
-        align-items: end;
-    }
-}
-@media screen and (max-width: 590px) {
-    .sidebar
-    {
-        grid-template-areas: 
-            'list-of-authors'
-            'list-of-films'
-        ;
-        grid-row-gap: 4em;
-    }
-}
+
 .about-me-text
 {
     grid-area: about-me-text;
-}
-@media screen and (max-width: 1024px)
-{
-    .about-me-grid
-    {
-        grid-template-areas: 
-            'owners-img quote'
-            'owners-img page-owner'
-            'sidebar about-me-text'
-        ;
-        grid-row-gap: 15px;
-    }
-    .quote,
-    .sidebar,
-    .about-me-text
-    {
-        justify-self: center;
-    }
-    .about-me
-    {
-        margin-top: -180px;
-    }
-    .page-owner__name
-    {
-        color: #fff;
-    }
-    .quote
-    {
-        padding: 0 20px 0 20px;
-    }
-}
-@media screen and (max-width: 920px)
-{
-    .about-me-grid
-    {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            'quote'
-            'owners-img'
-            'page-owner'
-            'sidebar'
-            'about-me-text'
-        ;
-    }
-    .page-owner__name
-    {
-        color: #333;
-        justify-self: center;
-    }
-    .page-owner
-    {
-        justify-self: center;
-    }
-    .ref-container
-    {
-        margin-left: 28%;
-    }
 }    
 .owners-img
 {
@@ -411,17 +302,7 @@
     font-weight: 400;
     font-family: "Open Sans";
 }
-@media screen and (max-width: 1024px)
-{ 
-    .films-area-wrapper
-    {
-        padding: 0;
-    }
-    .film-container
-    {
-        margin-top: 10px;    
-    }
-}
+
 .films-area-content
 {
     min-width: 100%;
@@ -433,38 +314,13 @@
     padding: 0 0 0 27px;
     justify-content: space-evenly;
 }
-@media screen and (max-width: 768px) 
-{
-    .films-area__name
-    {
-        align-self: center;
-    }
-}
-@media screen and (max-width: 320px)
-{
-    .films-area-content
-    {
-        margin-left: -27px;
-    }
-}
+
 .film-img
 {
     width: 285px;
     height: 190px;
     border-radius: 5px;
     background-color: #464646;    
-}
-@media screen and (max-width: 280px)
-{
-    .film-img
-    {
-        width: 230px;
-        height: 160px;
-    }    
-    .films-area-content
-    {
-        margin-left: -24px;
-    }    
 }
 .film-name
 {
@@ -552,38 +408,6 @@
     font-family: "Open Sans";
     margin: -1px 0 0 -2px;    
 }
-@media screen and (max-width: 768px)
-{
-    .form-header__line-first,
-    .form-header__line-second
-    {
-        min-width: 150px;
-    }
-}
-@media screen and (max-width: 698px)
-{
-    .form-header__line-first,
-    .form-header__line-second
-    {
-        min-width: 100px;
-    }
-}
-@media screen and (max-width: 480px)
-{
-    .form-header__line-first,
-    .form-header__line-second
-    {
-        min-width: 20px;
-    }
-}
-@media screen and (max-width: 360px)
-{
-    .form-header__line-first,
-    .form-header__line-second
-    {
-        display: none;
-    }
-}
 .form-work-area
 {
     margin: 68px 0 0 11px;
@@ -623,13 +447,6 @@
     font-weight: 400;
     font-family: "Open Sans";        
 }
-@media screen and (max-width: 570px)
-{
-    .input-text
-    {
-        min-width: 95.8%; 
-    }    
-}
 .select-country
 {
     margin: 4px 0 41px 0;
@@ -651,69 +468,7 @@
 {
     max-width: 100%;
 }
-@media screen and (max-width: 3000px)
-{
-    .select-country
-    {
-        background: url('../imgs/arrow_down.png') no-repeat right center;   
-        background-position-x: 498px;
-        background-position-y: 18px;
-    }    
-}
-@media screen and (max-width: 570px)
-{
-    .form-work-area,
-    .select-country
-    {
-        max-width: 440px;
-    }
-    .select-country
-    {
-        min-width: 101%;
-        margin-left: 6px;
-        background: url('../imgs/arrow_down.png') no-repeat right center;   
-        background-position-x: 398px;
-        background-position-y: 18px;
-    }   
-}
-@media screen and (max-width: 480px)
-{
-    .form-work-area
-    {
-        max-width: 320px;
-    }
-    .form-work-area
-    {
-        margin: 68px 0 0 -14px;
-    }
-    .select-country
-    {
-        min-width: 102.6%;
-        margin-left: 12px;
-        background: url('../imgs/arrow_down.png') no-repeat right center;
-        background-position-x: 288px;
-        background-position-y: 18px;
-    }   
-}
-@media screen and (max-width: 320px)
-{
-    .form-work-area
-    {
-        max-width: 240px;
-    }
-    .form-work-area
-    {
-        margin: 68px 0 0 -14px;
-    }
-    .select-country
-    {
-        min-width: 105.8%;
-        margin-left: 15px;
-        background: url(../imgs/arrow_down.png) no-repeat right center;
-        background-position-x: 208px;
-        background-position-y: 18px;
-    }   
-}
+
 .radio-gender
 {
     min-width: 100%;
@@ -755,27 +510,6 @@
     font-weight: 400;
     font-family: "Open Sans";    
 }
-@media screen and (max-width: 570px)
-{
-    .textarea
-    {
-        min-width: 437.19px;
-    }
-}
-@media screen and (max-width: 480px)
-{
-    .textarea
-    {
-        min-width: 321.19px;
-    }
-}
-@media screen and (max-width: 320px)
-{
-    .textarea
-    {
-        min-width: 246.19px;
-    }
-}
 .textarea:focus,
 .input-text:focus,
 .select-country:focus
@@ -815,4 +549,256 @@
     line-height: 32px;
     color: #555555;
     font-family: "Georgia";
+}
+@media screen and (max-width: 3000px)
+{
+    .select-country
+    {
+        background: url('../imgs/arrow_down.png') no-repeat right center;   
+        background-position-x: 498px;
+        background-position-y: 18px;
+    }    
+}
+@media screen and (max-width: 1024px)
+{
+    .about-me-grid
+    {
+        grid-template-areas: 
+            'owners-img quote'
+            'owners-img page-owner'
+            'sidebar about-me-text'
+        ;
+        grid-row-gap: 15px;
+    }
+    .quote,
+    .sidebar,
+    .about-me-text
+    {
+        justify-self: center;
+    }
+    .about-me
+    {
+        margin-top: -180px;
+    }
+    .page-owner__name
+    {
+        color: #fff;
+    }
+    .quote
+    {
+        padding: 0 20px 0 20px;
+    }
+    .films-area-wrapper
+    {
+        padding: 0;
+    }
+    .film-container
+    {
+        margin-top: 60px;    
+    }
+}
+@media screen and (max-width: 920px)
+{
+    .about-me-grid
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'quote'
+            'owners-img'
+            'sidebar'
+            'page-owner'
+            'about-me-text'
+        ;
+    }
+    .page-owner__name
+    {
+        color: #333;
+        justify-self: center;
+    }
+    .page-owner
+    {
+        justify-self: center;
+    }
+    .ref-container
+    {
+        margin-left: 28%;
+    }
+    .sidebar
+    {
+        grid-template-areas: 'list-of-authors list-of-films';
+        grid-column-gap: 3.9em;
+        align-items: end;
+    }
+    .films-area__name
+    {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .navigation-menu
+    {
+        flex-flow: column wrap;
+        min-width: 100%;
+        margin: 0;
+    }
+    .nav-ref-about,
+    .nav-ref-hobby,
+    .nav-ref-films
+    {
+        min-height: 50px;
+        justify-content: center;
+    }
+    .about-me
+    {
+        margin-top: -180px;
+    }
+    .text-header
+    {
+        text-align: center;
+    }
+    .text__about-me,
+    .text__hobby
+    {
+        padding: 0 50px 0 50px;
+        text-align: center;
+    }
+    .ref-container
+    {
+        text-align: center;
+        margin-left: 0;
+    }
+    .films-area__name
+    {
+        align-self: center;
+    }
+    .form-header__line-first,
+    .form-header__line-second
+    {
+        min-width: 150px;
+    }
+}
+@media screen and (max-width: 698px)
+{
+    .form-header__line-first,
+    .form-header__line-second
+    {
+        min-width: 100px;
+    }
+}
+@media screen and (max-width: 590px) 
+{
+    .sidebar
+    {
+        grid-template-areas: 
+            'list-of-authors'
+            'list-of-films'
+        ;
+        grid-row-gap: 4em;
+    }
+}
+
+@media screen and (max-width: 570px)
+{
+    .input-text
+    {
+        min-width: 95.8%; 
+    }
+    .form-work-area,
+    .select-country
+    {
+        max-width: 440px;
+    }
+    .select-country
+    {
+        min-width: 101%;
+        margin-left: 6px;
+        background: url('../imgs/arrow_down.png') no-repeat right center;   
+        background-position-x: 398px;
+        background-position-y: 18px;
+    }
+    .textarea
+    {
+        min-width: 437.19px;
+    }    
+}
+@media screen and (max-width: 480px)
+{
+    .form-header__line-first,
+    .form-header__line-second
+    {
+        min-width: 20px;
+    }
+    .form-work-area
+    {
+        max-width: 320px;
+    }
+    .form-work-area
+    {
+        margin: 68px 0 0 -14px;
+    }
+    .select-country
+    {
+        min-width: 102.6%;
+        margin-left: 12px;
+        background: url('../imgs/arrow_down.png') no-repeat right center;
+        background-position-x: 288px;
+        background-position-y: 18px;
+    }
+    .textarea
+    {
+        min-width: 321.19px;
+    }  
+}
+@media screen and (max-width: 360px)
+{
+    .form-header__line-first,
+    .form-header__line-second
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 320px)
+{
+    .owners-img
+    {
+        max-width: 95%;
+    }
+    .films-area-content
+    {
+        margin-left: -27px;
+    }   
+    .form-work-area
+    {
+        max-width: 240px;
+    }
+    .form-work-area
+    {
+        margin: 68px 0 0 -14px;
+    }
+    .select-country
+    {
+        min-width: 105.8%;
+        margin-left: 15px;
+        background: url(../imgs/arrow_down.png) no-repeat right center;
+        background-position-x: 208px;
+        background-position-y: 18px;
+    }
+    .textarea
+    {
+        min-width: 246.19px;
+    }   
+}
+@media screen and (max-width: 280px)
+{
+    .film-img
+    {
+        width: 230px;
+        height: 160px;
+    }    
+    .films-area-content
+    {
+        margin-left: -24px;
+    }    
 }
