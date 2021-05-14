@@ -8,7 +8,7 @@ if (count($get) !== 0)
     foreach ($get as $key => $value)
     {
         $keyLength = strlen($key);
-        if ($keyLength > $maxStringLength)      //найти самое длинный identifier, для отформатированного вывода
+        if ($keyLength > $maxStringLength)      //найти самый длинный identifier, для отформатированного вывода
         {
             $maxStringLength = $keyLength;
         }
