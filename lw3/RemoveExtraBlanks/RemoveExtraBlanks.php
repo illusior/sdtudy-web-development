@@ -5,7 +5,7 @@ header('Content-Type: text/plain');
 
 isset($_GET['text'])?$text = $_GET['text']:$text = null;
 
-if ($text !== null)
+if ($text !== '')
 {
     $arr = explode(' ', $text);
     $arrLength = count($arr);
