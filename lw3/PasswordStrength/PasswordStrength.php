@@ -1,6 +1,7 @@
 <?php
 //программа считает надёжность пароля, переданного в параметре password $_GET
 
+header("Content-Type: text/plain");
 
 if ($_GET["password"] !== '' && isset($_GET["password"]))
 {
@@ -8,33 +9,33 @@ if ($_GET["password"] !== '' && isset($_GET["password"]))
 
     if (preg_match("/[a-zA-Z0-9]+/", $password))
     {
-        echo "$password is valid password <br />";
+        echo "$password is valid password \n";
 
         //за каждый символ
         $len = strlen($password);
         $safety = 0;
         $safety += 4 * $len; 
-        echo "за каждый символ ", " 4 * ", $len, " = ", 4 * $len, "<br />";
+        echo "за каждый символ ", " 4 * ", $len, " = ", 4 * $len, "\n";
                                   //4 *    x       =    delta(Safety)
 
         //за каждую цифру в пароле
         preg_match_all("/\d/", $password, $matchesDigits, PREG_SET_ORDER, 0);
         $safety += 4 * count($matchesDigits); 
-        echo "за каждую цифру в пароле ", "4 * ", count($matchesDigits), " = ", 4 * count($matchesDigits), "<br />";
+        echo "за каждую цифру в пароле ", "4 * ", count($matchesDigits), " = ", 4 * count($matchesDigits), "\n";
                                          //4 *    x                        =   delta(Safety)
 
         //за каждую букву в верхнем регистре, почему-то URL всегда в маленьком регистре
         preg_match_all("/[A-Z]/", $password, $matchesUpperSymbols, PREG_SET_ORDER, 0);
         $safety += ($len - count($matchesUpperSymbols)) * 2;
         echo "за каждую букву в верхнем регистре в пароле ",
-           $len, " - ", count($matchesUpperSymbols), " * 2 = ", ($len - count($matchesUpperSymbols)) * 2, "<br />";
+           $len, " - ", count($matchesUpperSymbols), " * 2 = ", ($len - count($matchesUpperSymbols)) * 2, "\n";
          //(длина  -    x)                             * 2 =    delta(Safety)
 
         //за каждую букву в нижнем регистре, почему-то URL всегда в маленьком регистре
         preg_match_all("/[a-z]/", $password, $matchesUpperSymbols, PREG_SET_ORDER, 0);
         $safety += ($len - count($matchesUpperSymbols)) * 2;
         echo "за каждую букву в нижнем регистре в пароле ", 
-           $len, " - ", count($matchesUpperSymbols), " * 2 = ", ($len - count($matchesUpperSymbols)) * 2, "<br />";        
+           $len, " - ", count($matchesUpperSymbols), " * 2 = ", ($len - count($matchesUpperSymbols)) * 2, "\n";        
         //(длина   -    x)                             * 2 =    delta(Safety)
 
         //если пароль НЕ содержит цифр или НЕ содержит букв - штраф
@@ -43,7 +44,7 @@ if ($_GET["password"] !== '' && isset($_GET["password"]))
         if ($hasAlph && !$hasDigits || !$hasAlph && $hasDigits)
         {
             $safety -= strlen($password);
-            echo "за пароль, состоящий только из цифр или только из букв - штраф в размере ", strlen($password), "<br />";
+            echo "за пароль, состоящий только из цифр или только из букв - штраф в размере ", strlen($password), "\n";
         }
 
         //если в пароле есть повторяющиеся символы - штраф
@@ -58,7 +59,7 @@ if ($_GET["password"] !== '' && isset($_GET["password"]))
         }
         if ($amountOfRepeatedChars > 0)
         {
-            echo "за пароль, содержащий одинаковые символы - штраф в размере ", $amountOfRepeatedChars, " - кол-во повторённых символов", "<br />";
+            echo "за пароль, содержащий одинаковые символы - штраф в размере ", $amountOfRepeatedChars, " - кол-во повторённых символов", "\n";
         }
         $safety -= $amountOfRepeatedChars;
 
