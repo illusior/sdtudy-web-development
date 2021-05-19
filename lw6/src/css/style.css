@@ -550,7 +550,7 @@
     color: #555555;
     font-family: "Georgia";
 }
-@media screen and (max-width: 3000px)
+@media screen and (max-width: 1920px)
 {
     .select-country
     {
