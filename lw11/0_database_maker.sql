@@ -15,6 +15,7 @@ CREATE TABLE groups
 (
     id                INT AUTO_INCREMENT NOT NULL,
     `group`           VARCHAR(255)       NOT NULL,
+    faculty_id        INT                NOT NULL,
     PRIMARY KEY (id)
 ) DEFAULT CHARACTER SET utf8mb4
   COLLATE `utf8mb4_unicode_ci`
@@ -36,17 +37,17 @@ INSERT INTO faculties SET faculty = 'PS';
 INSERT INTO faculties SET faculty = 'BI';
 INSERT INTO faculties SET faculty = 'ISA';
 
-INSERT INTO groups SET `group` = 'PS-11';
-INSERT INTO groups SET `group` = 'PS-12';
-INSERT INTO groups SET `group` = 'PS-13';
+INSERT INTO groups SET `group` = 'PS-11', faculty_id = 1;
+INSERT INTO groups SET `group` = 'PS-12', faculty_id = 1;
+INSERT INTO groups SET `group` = 'PS-13', faculty_id = 1;
 
-INSERT INTO groups SET `group` = 'BI-11';
-INSERT INTO groups SET `group` = 'BI-12';
-INSERT INTO groups SET `group` = 'BI-13';
+INSERT INTO groups SET `group` = 'BI-11', faculty_id = 2;
+INSERT INTO groups SET `group` = 'BI-12', faculty_id = 2;
+INSERT INTO groups SET `group` = 'BI-13', faculty_id = 2;
 
-INSERT INTO groups SET `group` = 'ISA-11';
-INSERT INTO groups SET `group` = 'ISA-12';
-INSERT INTO groups SET `group` = 'ISA-13';
+INSERT INTO groups SET `group` = 'ISA-11', faculty_id = 3;
+INSERT INTO groups SET `group` = 'ISA-12', faculty_id = 3;
+INSERT INTO groups SET `group` = 'ISA-13', faculty_id = 3;
 
 INSERT INTO students SET first_name = 'Ivan',  last_name = 'Pu', age = 19, group_id = 1;
 INSERT INTO students SET first_name = 'Paul',  last_name = 'Xi', age = 20, group_id = 2;
